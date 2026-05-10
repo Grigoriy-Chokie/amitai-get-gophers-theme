@@ -1,0 +1,289 @@
+{{ 'section-yard-hero.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign desktop_image = section.settings.background_image
+  assign mobile_image = section.settings.mobile_background_image
+
+  if mobile_image == blank
+    assign mobile_image = desktop_image
+  endif
+-%}
+
+{%- style -%}
+  #YardHero-{{ section.id }} {
+    --yard-hero-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    --yard-hero-desktop-min-height: {{ section.settings.desktop_min_height }}px;
+    --yard-hero-mobile-min-height: {{ section.settings.mobile_min_height }}px;
+    --yard-hero-content-max-width: {{ section.settings.content_width }}px;
+    --yard-hero-mobile-radius: {{ section.settings.mobile_corner_radius }}px;
+    --yard-hero-heading-desktop-size: {{ section.settings.desktop_heading_size }}px;
+    --yard-hero-heading-mobile-size: {{ section.settings.mobile_heading_size }}px;
+    --yard-hero-copy-desktop-size: {{ section.settings.desktop_text_size }}px;
+    --yard-hero-copy-mobile-size: {{ section.settings.mobile_text_size }}px;
+    --yard-hero-primary-button: {{ section.settings.primary_button_color }};
+    --yard-hero-primary-button-rgb: {{ section.settings.primary_button_color | color_to_rgb | remove: 'rgb(' | remove: ')' }};
+    --yard-hero-secondary-button: {{ section.settings.secondary_button_color }};
+    --yard-hero-secondary-button-rgb: {{ section.settings.secondary_button_color | color_to_rgb | remove: 'rgb(' | remove: ')' }};
+    --yard-hero-button-text: {{ section.settings.button_text_color }};
+  }
+{%- endstyle -%}
+
+<section id="YardHero-{{ section.id }}" class="yard-hero-section">
+  <div class="yard-hero__shell">
+    <div class="yard-hero{% if desktop_image != blank %} yard-hero--has-image{% endif %}">
+      {%- if desktop_image != blank -%}
+        <div class="yard-hero__media" aria-hidden="true">
+          <picture>
+            {%- if mobile_image != blank -%}
+              <source
+                media="(max-width: 749px)"
+                srcset="
+                  {%- if mobile_image.width >= 375 -%}{{ mobile_image | img_url: '375x' }} 375w,{%- endif -%}
+                  {%- if mobile_image.width >= 550 -%}{{ mobile_image | img_url: '550x' }} 550w,{%- endif -%}
+                  {%- if mobile_image.width >= 750 -%}{{ mobile_image | img_url: '750x' }} 750w,{%- endif -%}
+                  {%- if mobile_image.width >= 1100 -%}{{ mobile_image | img_url: '1100x' }} 1100w,{%- endif -%}
+                  {%- if mobile_image.width >= 1500 -%}{{ mobile_image | img_url: '1500x' }} 1500w,{%- endif -%}
+                  {%- if mobile_image.width >= 1780 -%}{{ mobile_image | img_url: '1780x' }} 1780w,{%- endif -%}
+                  {{ mobile_image | img_url: 'master' }} {{ mobile_image.width }}w"
+                sizes="100vw"
+              >
+            {%- endif -%}
+            <img
+              srcset="
+                {%- if desktop_image.width >= 750 -%}{{ desktop_image | img_url: '750x' }} 750w,{%- endif -%}
+                {%- if desktop_image.width >= 1100 -%}{{ desktop_image | img_url: '1100x' }} 1100w,{%- endif -%}
+                {%- if desktop_image.width >= 1500 -%}{{ desktop_image | img_url: '1500x' }} 1500w,{%- endif -%}
+                {%- if desktop_image.width >= 1780 -%}{{ desktop_image | img_url: '1780x' }} 1780w,{%- endif -%}
+                {%- if desktop_image.width >= 2000 -%}{{ desktop_image | img_url: '2000x' }} 2000w,{%- endif -%}
+                {%- if desktop_image.width >= 3000 -%}{{ desktop_image | img_url: '3000x' }} 3000w,{%- endif -%}
+                {%- if desktop_image.width >= 3840 -%}{{ desktop_image | img_url: '3840x' }} 3840w,{%- endif -%}
+                {{ desktop_image | img_url: 'master' }} {{ desktop_image.width }}w"
+              sizes="100vw"
+              src="{{ desktop_image | img_url: '2000x' }}"
+              alt=""
+              loading="eager"
+              fetchpriority="high"
+              width="{{ desktop_image.width }}"
+              height="{{ desktop_image.height }}"
+            >
+          </picture>
+        </div>
+      {%- endif -%}
+
+      <div class="yard-hero__overlay" aria-hidden="true"></div>
+
+      <div class="yard-hero__inner">
+        <div class="yard-hero__content">
+          {%- if section.settings.heading != blank -%}
+            <h1 class="yard-hero__title">{{ section.settings.heading | escape | newline_to_br }}</h1>
+          {%- endif -%}
+
+          {%- if section.settings.copy != blank -%}
+            <div class="yard-hero__copy rte">{{ section.settings.copy }}</div>
+          {%- endif -%}
+
+          {%- if section.settings.primary_button_label != blank or section.settings.secondary_button_label != blank -%}
+            <div class="yard-hero__actions">
+              {%- if section.settings.primary_button_label != blank -%}
+                <a
+                  {% if section.settings.primary_button_link != blank %}href="{{ section.settings.primary_button_link }}"{% else %}role="link" aria-disabled="true"{% endif %}
+                  class="yard-hero__cta yard-hero__cta--primary"
+                >
+                  {{ section.settings.primary_button_label | escape }}
+                </a>
+              {%- endif -%}
+
+              {%- if section.settings.secondary_button_label != blank -%}
+                <a
+                  {% if section.settings.secondary_button_link != blank %}href="{{ section.settings.secondary_button_link }}"{% else %}role="link" aria-disabled="true"{% endif %}
+                  class="yard-hero__cta yard-hero__cta--secondary"
+                >
+                  {{ section.settings.secondary_button_label | escape }}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Yard Hero",
+  "tag": "section",
+  "class": "section section-yard-hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Desktop background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background_image",
+      "label": "Mobile background image"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "STOP THE DIGGING.\nRECLAIM YOUR YARD."
+    },
+    {
+      "type": "richtext",
+      "id": "copy",
+      "label": "Body copy",
+      "default": "<p>Professional-grade gopher and mole solutions trusted to catch over 20,000 pests.</p><p>We show you how to take back your property.</p>"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "Primary button label",
+      "default": "Shop Trapping Kits"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "Secondary button label",
+      "default": "Watch: Gopher vs. Mole Guide"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_min_height",
+      "min": 560,
+      "max": 1100,
+      "step": 20,
+      "unit": "px",
+      "label": "Desktop minimum height",
+      "default": 760
+    },
+    {
+      "type": "range",
+      "id": "mobile_min_height",
+      "min": 700,
+      "max": 1400,
+      "step": 20,
+      "unit": "px",
+      "label": "Mobile minimum height",
+      "default": 980
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 560,
+      "max": 1200,
+      "step": 20,
+      "unit": "px",
+      "label": "Content max width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "mobile_corner_radius",
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile corner radius",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "desktop_heading_size",
+      "min": 52,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop heading size",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "min": 40,
+      "max": 88,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile heading size",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "desktop_text_size",
+      "min": 18,
+      "max": 34,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop body size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mobile_text_size",
+      "min": 18,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile body size",
+      "default": 22
+    },
+    {
+      "type": "header",
+      "content": "Button colors"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_color",
+      "label": "Primary button color",
+      "default": "#ed5e17"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_color",
+      "label": "Secondary button color",
+      "default": "#425f3f"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Yard Hero"
+    }
+  ]
+}
+{% endschema %}

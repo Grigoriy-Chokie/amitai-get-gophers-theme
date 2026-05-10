@@ -10,41 +10,27 @@
 {
   "sections": {
     "1645800090adba6665": {
-      "type": "rich-text",
-      "blocks": {
-        "1645800090203d67a3-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Welcome to Get Gophers!",
-            "heading_size": "h1"
-          }
-        },
-        "1645800090203d67a3-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Your #1 Source for Gopher & Mole Trapping Solutions</strong></p><p>Looking for <strong>reliable, effective, and safe solutions</strong> to your gopher or mole problem? You’ve come to the right place.</p><p>At <strong>Get Gophers</strong>, we offer:</p><p>✅ The <strong>best gopher and mole traps</strong><br/>✅ <strong>Complete trapping kits</strong> with everything you need<br/>✅ <strong>Trapping tools & accessories</strong> for any situation<br/>✅ Professional <strong>instructional training videos</strong></p><h3>🎯 <strong>Over 20,000 Gophers Trapped!</strong></h3><p>Our proven methods—taught in our exclusive <strong>video training series</strong>—have helped thousands of homeowners, farmers, and landscapers reclaim their yards, gardens, and fields.</p><p><strong>YOU CAN take back your property—</strong> and we’ll show you how!</p>"
-          }
-        },
-        "1645800090203d67a3-2": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "1645800090203d67a3-0",
-        "1645800090203d67a3-1",
-        "1645800090203d67a3-2"
-      ],
+      "type": "yard-hero",
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "background_image": "shopify://shop_images/photo-1598216254705-da96b724bb1b.jpg",
+        "heading": "STOP THE DIGGING.\nRECLAIM YOUR YARD.",
+        "copy": "<p>Professional-grade gopher and mole solutions trusted to catch over 20,000 pests.</p><p>We show you how to take back your property.</p>",
+        "primary_button_label": "Shop Trapping Kits",
+        "primary_button_link": "/collections/best-sellers",
+        "secondary_button_label": "Watch: Gopher vs. Mole Guide",
+        "secondary_button_link": "#video-section-video",
+        "desktop_min_height": 760,
+        "mobile_min_height": 980,
+        "content_width": 1200,
+        "mobile_corner_radius": 32,
+        "overlay_opacity": 30,
+        "desktop_heading_size": 96,
+        "mobile_heading_size": 72,
+        "desktop_text_size": 24,
+        "mobile_text_size": 22,
+        "primary_button_color": "#ed5e17",
+        "secondary_button_color": "#425f3f",
+        "button_text_color": "#ffffff"
       }
     },
     "16458003448789d458": {

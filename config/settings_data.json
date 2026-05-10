@@ -1,0 +1,121 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "colors_accent_1": "#425f3f",
+    "colors_accent_2": "#ed5e17",
+    "colors_text": "#252525",
+    "colors_outline_button_labels": "#ed5e17",
+    "colors_background_2": "#EFECEC",
+    "type_header_font": "quantico_n4",
+    "type_body_font": "bio_rhyme_n4",
+    "accent_icons": "text",
+    "social_youtube_link": "https://www.youtube.com/channel/UCbYkit178PsSBtGHhAt8whw",
+    "predictive_search_enabled": true,
+    "favicon": "shopify://shop_images/gopher-favicon-color-425f3f.png",
+    "checkout_logo_image": "shopify://shop_images/My_project_6.jpg",
+    "checkout_logo_position": "left",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "ORDERS WILL SHIP WITHIN ONE BUSINESS DAY",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          },
+          "bd3bb62a-2fbd-4017-8305-1a3c6d899cc3": {
+            "type": "announcement",
+            "settings": {
+              "text": "FREE SHIPPING ON ORDERS OVER $50!!",
+              "color_scheme": "accent-2",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0",
+          "bd3bb62a-2fbd-4017-8305-1a3c6d899cc3"
+        ],
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "color_scheme": "background-1",
+          "logo": "shopify://shop_images/PNG_Logo_Type_1.png",
+          "logo_width": 250,
+          "logo_position": "top-center",
+          "menu": "main-menu",
+          "show_line_separator": false,
+          "enable_sticky_header": false,
+          "margin_bottom": 52
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "LINKS",
+              "menu": "footer"
+            }
+          },
+          "106fe8e0-6792-4377-99af-40fa5f0cce65": {
+            "type": "link_list",
+            "disabled": true,
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "106fe8e0-6792-4377-99af-40fa5f0cce65"
+        ],
+        "settings": {
+          "color_scheme": "accent-1",
+          "newsletter_enable": false,
+          "newsletter_heading": "Subscribe to our Newsletters",
+          "show_social": false,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true,
+          "margin_top": 0,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "17433828765706220224": {
+        "type": "shopify://apps/back-in-stock-restock-alert/blocks/app-embed/a2a0a648-aa81-4132-98a8-31e62b1f3e83",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  }
+}

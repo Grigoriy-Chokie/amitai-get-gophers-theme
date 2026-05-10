@@ -1,0 +1,175 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "164555464284e0a7e5": {
+      "type": "rich-text",
+      "blocks": {
+        "164555464228c7bc29-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gopher Training",
+            "heading_size": "h1"
+          }
+        },
+        "164555464228c7bc29-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Thank you for your purchase! Below is the gopher trapping training videos that will teach you everything you need to know about trapping gophers. Please watch the entire series before setting any traps. </p>"
+          }
+        },
+        "164555464228c7bc29-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "164555464228c7bc29-0",
+        "164555464228c7bc29-1",
+        "164555464228c7bc29-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "1645554750bb522e25": {
+      "type": "video",
+      "settings": {
+        "heading": "Part 1 - Introduction",
+        "cover_image": "shopify://shop_images/GOPHER_TRAPPING_7_731fc7e4-85f6-4614-9200-5bde4d02038b.jpg",
+        "video_url": "https://vimeo.com/681668594",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "164555483189db0eda": {
+      "type": "video",
+      "settings": {
+        "heading": "Part 2 - Trap Placement",
+        "cover_image": "shopify://shop_images/GOPHER_TRAPPING_8.jpg",
+        "video_url": "https://vimeo.com/681653091",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1645554866128dd91b": {
+      "type": "video",
+      "settings": {
+        "heading": "Part 3 - Checking the Traps",
+        "cover_image": "shopify://shop_images/GOPHER_TRAPPING_4.jpg",
+        "video_url": "https://vimeo.com/681672275",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1645807127860bfbf4": {
+      "type": "rich-text",
+      "blocks": {
+        "16458071276a9950ee-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "NEED MORE HELP?",
+            "heading_size": "h1"
+          }
+        },
+        "16458071276a9950ee-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Check out our \"Chat With A Pro\" option to schedule your one on one phone call.</p>"
+          }
+        },
+        "16458071276a9950ee-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Chat With A Pro",
+            "button_link": "https://getgophers.com/products/chat-with-a-pro",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "16458071276a9950ee-0",
+        "16458071276a9950ee-1",
+        "16458071276a9950ee-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "SUBSCRIBE"
+          }
+        },
+        "newsletter-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><em>Subscribe to be the first to hear about our exclusive offers and latest arrivals.</em></p>"
+          }
+        },
+        "newsletter-2": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "newsletter-0",
+        "newsletter-1",
+        "newsletter-2"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164555464284e0a7e5",
+    "1645554750bb522e25",
+    "164555483189db0eda",
+    "1645554866128dd91b",
+    "1645807127860bfbf4",
+    "newsletter"
+  ]
+}

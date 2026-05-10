@@ -1,0 +1,185 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "7670917c-8d9b-4701-bede-78684b5fc2d0": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "bd6d13fc-d5a0-411e-a5d5-d4711a792b0c": {
+          "type": "shopify://apps/back-in-stock-restock-alert/blocks/backinstock/a2a0a648-aa81-4132-98a8-31e62b1f3e83",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "collapsible-tab-0": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Materials",
+            "icon": "clipboard",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-tab-1": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "ruler",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-tab-2": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Care information",
+            "icon": "heart",
+            "content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "title",
+        "caption",
+        "7670917c-8d9b-4701-bede-78684b5fc2d0",
+        "price",
+        "quantity_selector",
+        "buy_buttons",
+        "bd6d13fc-d5a0-411e-a5d5-d4711a792b0c",
+        "description",
+        "share",
+        "collapsible-tab-0",
+        "collapsible-tab-1",
+        "collapsible-tab-2"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "thumbnail",
+        "media_size": "small",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
+    },
+    "main-product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 68
+      }
+    },
+    "1645750135f81e255d": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "SUBSCRIBE"
+          }
+        },
+        "newsletter-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><em>Subscribe to be the first to hear about our exclusive offers and latest arrivals.</em></p>"
+          }
+        },
+        "newsletter-2": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "newsletter-0",
+        "newsletter-1",
+        "newsletter-2"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main-product-recommendations",
+    "1645750135f81e255d",
+    "newsletter"
+  ]
+}

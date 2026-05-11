@@ -20,7 +20,7 @@
         "secondary_button_label": "Watch: Gopher vs. Mole Guide",
         "secondary_button_link": "#video-section-video",
         "desktop_min_height": 760,
-        "mobile_min_height": 980,
+        "mobile_min_height": 780,
         "content_width": 1200,
         "mobile_corner_radius": 32,
         "overlay_opacity": 30,

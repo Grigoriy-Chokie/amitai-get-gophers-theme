@@ -172,13 +172,30 @@
 }
 
 @media screen and (max-width: 749px) {
+  .yard-hero__shell {
+    margin-top: -39px;
+  }
 
   .yard-hero {
-    min-height: max(var(--yard-hero-mobile-min-height), calc(100svh - 1.2rem));
+    align-items: flex-start;
+    min-height: min(var(--yard-hero-mobile-min-height), calc(100svh - 1.2rem));
+  }
+
+  .yard-hero__inner {
+    padding: 4.8rem 1.6rem 4rem;
   }
 
   .yard-hero__title {
+    max-width: 9ch;
     margin-inline: auto;
+  }
+
+  .yard-hero__copy {
+    margin-top: 1.8rem;
+  }
+
+  .yard-hero__actions {
+    margin-top: 2.4rem;
   }
 }
 

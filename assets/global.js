@@ -136,6 +136,54 @@ function onKeyUpEscape(event) {
   summaryElement.focus();
 }
 
+function getAnchorTarget(hash) {
+  if (!hash || hash === '#') return null;
+
+  const decodedId = decodeURIComponent(hash.slice(1));
+  return document.getElementById(decodedId);
+}
+
+function scrollToAnchorTarget(hash, { smooth = true } = {}) {
+  const target = getAnchorTarget(hash);
+  if (!target) return false;
+
+  target.scrollIntoView({
+    behavior: smooth && !window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto',
+    block: 'center',
+    inline: 'nearest'
+  });
+
+  return true;
+}
+
+document.addEventListener('click', (event) => {
+  const anchor = event.target.closest('a[href]');
+  if (!anchor || anchor.classList.contains('skip-to-content-link')) return;
+
+  const href = anchor.getAttribute('href');
+  if (!href || href === '#') return;
+
+  const url = new URL(anchor.href, window.location.href);
+  const isSamePageLink =
+    url.origin === window.location.origin &&
+    url.pathname === window.location.pathname &&
+    url.search === window.location.search;
+
+  if (!isSamePageLink || !url.hash) return;
+
+  if (!getAnchorTarget(url.hash)) return;
+
+  event.preventDefault();
+  history.pushState(null, '', url.hash);
+  scrollToAnchorTarget(url.hash);
+});
+
+window.addEventListener('load', () => {
+  if (!window.location.hash) return;
+
+  scrollToAnchorTarget(window.location.hash, { smooth: false });
+});
+
 class QuantityInput extends HTMLElement {
   constructor() {
     super();

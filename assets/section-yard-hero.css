@@ -98,7 +98,7 @@
   max-width: min(100%, 77rem);
   margin: 2.8rem auto 0;
   color: rgba(255, 255, 255, 0.98);
-  font-size: var(--yard-hero-copy-mobile-size);
+  font-size: clamp(1.8rem, 5.2vw, var(--yard-hero-copy-mobile-size));
   line-height: 1.5;
   text-shadow: 0 0.4rem 1.8rem rgba(0, 0, 0, 0.2);
 }
@@ -172,17 +172,12 @@
 }
 
 @media screen and (max-width: 749px) {
-  .yard-hero__shell {
-    padding: 0 1.2rem 1.2rem;
-  }
 
   .yard-hero {
     min-height: max(var(--yard-hero-mobile-min-height), calc(100svh - 1.2rem));
-    border-radius: var(--yard-hero-mobile-radius);
   }
 
   .yard-hero__title {
-    max-width: 8.2ch;
     margin-inline: auto;
   }
 }

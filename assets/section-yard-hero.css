@@ -72,6 +72,7 @@
   z-index: 2;
   width: 100%;
   padding: 5.6rem 1.6rem;
+  margin: auto;
 }
 
 .yard-hero__content {
@@ -172,10 +173,6 @@
 }
 
 @media screen and (max-width: 749px) {
-  .yard-hero__shell {
-    margin-top: -39px;
-  }
-
   .yard-hero {
     align-items: flex-start;
     min-height: min(var(--yard-hero-mobile-min-height), calc(100svh - 1.2rem));
@@ -186,7 +183,6 @@
   }
 
   .yard-hero__title {
-    max-width: 9ch;
     margin-inline: auto;
   }
 
